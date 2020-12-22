@@ -43,8 +43,8 @@ svg {
 .snare-pad.active {
   background: rgba(247, 64, 91, 0.644);
 }
-.hithat-pad.active {
-  background: rgb(255, 255, 79);
+.hihat-pad.active {
+  background: rgb(250, 250, 5);
 }
 
 .hihat-track,
@@ -95,4 +95,13 @@ svg {
 select {
   padding: 1rem;
   font-size: 1rem;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
