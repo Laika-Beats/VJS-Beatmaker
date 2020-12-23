@@ -22,8 +22,9 @@ class DrumKit {
     // when the index gets to 8 then the next step will go to 0
     let step = this.index % 8;
     const activeBars = document.querySelectorAll(`.b${step}`);
-    // loops over the pads and applies an animation
+    // loops over the pads and triggers sound when the sequencer hits an "active" pad
     activeBars.forEach((bar) => {
+      //applies aniamtion to pad in sequence
       bar.style.animation = `playTrack 0.3s alternate ease-in-out 2`;
       if (bar.classList.contains("active")) {
         //Check each sound
@@ -56,6 +57,7 @@ class DrumKit {
       }, interval);
     }
   }
+  //plays and stops beat sequence
   updateBtn() {
     if (!this.isPlaying) {
       this.playBtn.innerText = "Stop";
@@ -65,6 +67,7 @@ class DrumKit {
       this.playBtn.classList.remove("active");
     }
   }
+  // allows user to change sample with dropdwon selection
   changeSound(e) {
     const selectionName = e.target.name;
     const selectionValue = e.target.value;
@@ -81,6 +84,7 @@ class DrumKit {
     }
     console.log(selectionName);
   }
+  // mutes/unmutes individual sounds
   mute(e) {
     console.log(e);
     const muteIndex = e.target.getAttribute("data-track");
@@ -112,11 +116,15 @@ class DrumKit {
       }
     }
   }
+  // changes values of bpm on the tempo slider
   changeTempo(e) {
     const tempoText = document.querySelector(".tempo-nr");
+    //changes value of bpm
     this.bpm = e.target.value;
+    //changes value of tempo text
     tempoText.innerText = e.target.value;
   }
+  // applies the value of the changed tempo slider
   updateTempo(e) {
     this.bpm = e.target.value;
     clearInterval(this.isPlaying);
