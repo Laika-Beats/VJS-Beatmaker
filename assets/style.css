@@ -224,10 +224,11 @@ h2{
   }
   .play {
     font-size: 1rem;
-    background: rgb(88, 88, 88);
+    background-color: rgba(0, 0, 0, 0.164); /* Black w/opacity/see-through */
     color: white;
     border: none;
     cursor: pointer;
+    border: 1px solid white;
   }
   .tempo p {
     margin-top: -10px;
