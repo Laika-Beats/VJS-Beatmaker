@@ -5,6 +5,8 @@
 }
 
 body {
+  background: #222222;
+  color: white;
   font-family: sans-serif;
 }
 i,
@@ -18,6 +20,7 @@ svg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: -170px;
 }
 
 .kick-pad,
@@ -30,28 +33,28 @@ svg {
   cursor: pointer;
 }
 .kick-pad {
-  background: lightcyan;
+  background: #d9202675;
 }
 .snare-pad {
-  background: rgba(255, 182, 193, 0.301);
+  background: #ff933477;
 }
 .hihat-pad {
-  background: lightyellow;
+  background: #ffce3c6e;
 }
 .openhat-pad {
-  background: rgba(0, 128, 0, 0.37);
+  background: #35d0b975;
 }
 .kick-pad.active {
-  background: rgb(96, 247, 247);
+  background: #d92027;
 }
 .snare-pad.active {
-  background: rgba(247, 64, 91, 0.644);
+  background: #ff9234;
 }
 .hihat-pad.active {
-  background: rgb(250, 250, 5);
+  background: #ffcd3c;
 }
 .openhat-pad.active {
-  background: rgb(0, 128, 0);
+  background: #35d0ba;
 }
 
 .hihat-track,
@@ -95,9 +98,9 @@ svg {
 .play {
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  background: rgb(88, 88, 88);
+  background-color: rgba(0, 0, 0, 0.164); /* Black w/opacity/see-through */
   color: white;
-  border: none;
+  border: 1px solid white;
   cursor: pointer;
   margin-top: 1rem;
 }
@@ -107,8 +110,9 @@ select {
   font-size: 1rem;
 }
 
+
 .mute.active {
-  background: rgba(128, 128, 128, 0.459);
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
 }
 
 .tempo {
@@ -121,9 +125,11 @@ select {
   margin: 1rem 0rem;
   width: 100%;
   position: relative;
-  background: rgb(88, 88, 88);
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: white;
   cursor: pointer;
   border-radius: 1rem;
+  margin-top: -20px;
 }
 .tempo p {
   font-size: 1rem;
@@ -145,10 +151,37 @@ select {
 #hihat-select,
 #openhat-select {
   min-width: 12rem;
+  background-color: rgba(0, 0, 0, 0.164); /* Black w/opacity/see-through */
+  color: white;
 }
 
 h1 {
   min-width: 9rem;
+  font-size: 30px;
+}
+
+
+.header-img {
+  width: 100vw;
+  height: 40vh;
+}
+
+.bg-text {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+h2{
+  font-size: 30px;
 }
 
 @media screen and (max-width: 760px) {
@@ -176,6 +209,7 @@ h1 {
     font-size: 1rem;
   }
   .sequencer {
+    margin-top: -120px;
     margin-right: auto;
   }
   .mute {
@@ -195,4 +229,33 @@ h1 {
     border: none;
     cursor: pointer;
   }
+  .tempo p {
+    margin-top: -10px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .header-img {
+    width: 100vw;
+    height: 25vh;
+    margin-bottom: 30px;
+  }
+  
+  .bg-text {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    margin-top: -60px;
+  }
+  .subText{
+    font-size: 0.2rem;
+    margin: 0.5rem;
+  }
+  
 }
+

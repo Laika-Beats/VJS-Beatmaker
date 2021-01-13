@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="./assets/style.css" class="style" />
   </head>
   <body>
+    <header>
+      <div class="header-img"></div>
+      <div class="bg-text">
+        <h2>Pristine Drum Machine</h2>
+        <p class="subText">A sample-based drum sequencer</p>
+      </div>
+    </header>
     <div class="sequencer">
       <div class="kick-track">
         <div class="controls">
@@ -137,6 +144,24 @@
       src="./assets/sounds/openhat-acoustic01.wav"
     ></audio>
 
+    <script src="./assets/three.r119.min.js"></script>
+<script src="./assets/vanta.dots.min.js"></script>
+<script>
+VANTA.DOTS({
+  el: ".header-img",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xd20909,
+  color2: 0xd92929,
+  size: 2.60,
+  spacing: 28.00
+})
+</script>
     <script src="assets/app.js"></script>
   </body>
 </html>
