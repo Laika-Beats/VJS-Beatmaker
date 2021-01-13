@@ -63,6 +63,7 @@ svg {
   width: 70%;
   justify-content: space-between;
   margin-top: 5%;
+  padding-left: -20px;
 }
 .kick,
 .snare,
@@ -148,4 +149,50 @@ select {
 
 h1 {
   min-width: 9rem;
+}
+
+@media screen and (max-width: 760px) {
+  .kick-pad,
+  .snare-pad,
+  .hihat-pad,
+  .openhat-pad {
+    width: 1rem;
+    height: 1rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+  }
+  h1 {
+    font-size: 1rem;
+    min-width: 3rem;
+    margin: -70px;
+  }
+  #kick-select,
+  #snare-select,
+  #hihat-select,
+  #openhat-select {
+    display: none;
+  }
+  option {
+    font-size: 1rem;
+  }
+  .sequencer {
+    margin-right: auto;
+  }
+  .mute {
+    display: none;
+  }
+  .kick,
+  .snare,
+  .hithat,
+  .openhat {
+    display: flex;
+    margin-left: -20px;
+  }
+  .play {
+    font-size: 1rem;
+    background: rgb(88, 88, 88);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
 }
