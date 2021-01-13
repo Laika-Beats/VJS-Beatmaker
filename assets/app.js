@@ -5,9 +5,11 @@ class DrumKit {
     this.currentKick = "./assets/sounds/kick-classic.wav";
     this.currentSnare = "./assets/sounds/snare-acoustic01.wav";
     this.currentHihat = "./assets/sounds/hihat.acoustic01.wav";
+    this.currentOpenhat = "./assets/sounds/openhat-acoustic01";
     this.kickAudio = document.querySelector(".kick-sound");
     this.snareAudio = document.querySelector(".snare-sound");
     this.hihatAudio = document.querySelector(".hihat-sound");
+    this.openhatAudio = document.querySelector(".openhat-sound");
     this.index = 0;
     this.bpm = 150;
     this.isPlaying = null;
@@ -41,6 +43,10 @@ class DrumKit {
         if (bar.classList.contains("hihat-pad")) {
           this.hihatAudio.currentTime = 0;
           this.hihatAudio.play();
+        }
+        if (bar.classList.contains("openhat-pad")) {
+          this.openhatAudio.currentTime = 0;
+          this.openhatAudio.play();
         }
       }
     });
@@ -81,6 +87,9 @@ class DrumKit {
       case "hihat-select":
         this.hihatAudio.src = selectionValue;
         break;
+      case "openhat-select":
+        this.openhatAudio.src = selectionValue;
+        break;
     }
     console.log(selectionName);
   }
@@ -100,6 +109,9 @@ class DrumKit {
         case "2":
           this.hihatAudio.volume = 0;
           break;
+        case "3":
+          this.openhatAudio.volume = 0;
+          break;
       }
     } else {
       switch (muteIndex) {
@@ -112,6 +124,9 @@ class DrumKit {
           break;
         case "2":
           this.hihatAudio.volume = 1;
+          break;
+        case "3":
+          this.openhatAudio.volume = 1;
           break;
       }
     }

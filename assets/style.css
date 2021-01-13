@@ -50,6 +50,9 @@ svg {
 .hihat-pad.active {
   background: rgb(250, 250, 5);
 }
+.openhat-pad.active {
+  background: rgb(0, 128, 0);
+}
 
 .hihat-track,
 .snare-track,
@@ -134,4 +137,15 @@ select {
   to {
     transform: scale(1.2);
   }
+}
+
+#kick-select,
+#snare-select,
+#hihat-select,
+#openhat-select {
+  min-width: 12rem;
+}
+
+h1 {
+  min-width: 9rem;
 }
