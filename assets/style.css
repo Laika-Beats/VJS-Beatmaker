@@ -22,7 +22,8 @@ svg {
 
 .kick-pad,
 .snare-pad,
-.hihat-pad {
+.hihat-pad,
+.openhat-pad {
   width: 3rem;
   height: 3rem;
   margin: 1rem 0.5rem;
@@ -37,6 +38,9 @@ svg {
 .hihat-pad {
   background: lightyellow;
 }
+.openhat-pad {
+  background: rgba(0, 128, 0, 0.37);
+}
 .kick-pad.active {
   background: rgb(96, 247, 247);
 }
@@ -49,7 +53,8 @@ svg {
 
 .hihat-track,
 .snare-track,
-.kick-track {
+.kick-track,
+.openhat-track {
   display: flex;
   align-items: center;
   width: 70%;
@@ -58,7 +63,8 @@ svg {
 }
 .kick,
 .snare,
-.hithat {
+.hithat,
+.openhat {
   display: flex;
 }
 .controls {
