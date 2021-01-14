@@ -184,6 +184,32 @@ h2{
   font-size: 30px;
 }
 
+@media screen and (max-width: 1024px) {
+  .kick-pad,
+.snare-pad,
+.hihat-pad,
+.openhat-pad {
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+h1 {
+  min-width: 5rem;
+  font-size: 20px;
+}
+.sequencer{
+  margin-left: -80px;
+  margin-top: -80px;
+}
+.header-img {
+  width: 100vw;
+  height: 40vh;
+}
+
+
+}
+
 @media screen and (max-width: 760px) {
   .kick-pad,
   .snare-pad,
