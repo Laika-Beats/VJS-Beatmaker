@@ -1,4 +1,5 @@
 # VJS Beatmaker (Version 1.0)
+https://laika-beats.github.io/VJS-Beatmaker/
 
 
 
@@ -20,15 +21,19 @@ A vanilla javascript drum sequencer with customizable samples and tempo.
 
 Installation:
 
-Open this link in your browser of choice: https://laika-beats.github.io/myWeatherDashboard/
+Open this link in your browser of choice: https://laika-beats.github.io/VJS-Beatmaker/
 
 ***************
 
 Usage:
 
-A.) Enter city name in the search field or choose one of the saved cities. 
+A.) Select the samples you want with the drop-down menu
 
-B.) Cities you search will be saved (via localStorage) and added to the list so you can quickly click and see the data again.
+B.) Adjust the tempo to your preference
+
+C.) Click the squares-- when they are lit up they are active and will play the sample 
+
+D.) Hit start to run the sequence and play audio on the clicked squares.
 
 ***************
 
